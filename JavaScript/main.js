@@ -23,7 +23,7 @@ const map = new mapboxgl.Map({
     });
 
 // Step2 : GeoCoding procces.
-const accessKey ='2f62756629fe3ff9a8dea086c453bad7'
+const accessKey ='e3144034bd035b5947ba89b44469f92b'
 
 
 button.addEventListener("click", () => {
