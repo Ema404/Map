@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Map Application</title>
+    <link rel="shortcut icon" href="img/map.png" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" 
+    integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet'/>
+     <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
+    <link rel="stylesheet" href="CSS/main.css"> 
+    
+</head>
+
+<body>
+    
+     <!-- Map Container -->
+     <div id="map"></div>
+    <!--search bar right align --> 
+       <div class="search">
+            <form action="#">
+                <input type="text"
+                    placeholder=" Search..."
+                    name="search"
+                    id="search">
+                <button id="button">Search
+                    <i class="fa fa-search"
+                        style="font-size: 18px;">
+                    </i>
+                </button>
+            </form>
+        </div>
+        <script src="JavaScript/main.js"></script>
+</body>
+</html>
