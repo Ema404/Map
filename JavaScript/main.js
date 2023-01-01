@@ -25,9 +25,6 @@ const map = new mapboxgl.Map({
 // Step2 : GeoCoding procces.
 const accessKey ='2f62756629fe3ff9a8dea086c453bad7'
 
-const errorCallback = (error) => {
-  console.log(error);
-};
 
 button.addEventListener("click", () => {
      address = document.getElementById("search").value.toUpperCase()
