@@ -37,7 +37,6 @@ button.addEventListener("click", () => {
           access_key: accessKey,
           query: address,
           output : 'json', 
-          callback :errorCallback,
           limit: 1
         }
       }).done(function(data) {
