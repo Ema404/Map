@@ -4,9 +4,12 @@
 // set center initaila state for the map :
 var latitude
 var longitude
-// var address =  document.getElementById('search')
+ var address
 const button = document.getElementById('button')
 
+document.addEventListener("load",()=>{
+  address = document.getElementById("search").value.toUpperCase()
+})
 
 mapboxgl.accessToken = 
     'pk.eyJ1IjoiZW1hbjEyMjgiLCJhIjoiY2xjZGJ1ZDN3MDBpNzNuczBjZG41MTBmeiJ9.OLgt59n0Jvlz8MBO6Y3Z3g';
@@ -22,9 +25,12 @@ const map = new mapboxgl.Map({
 // Step2 : GeoCoding procces.
 const accessKey ='2f62756629fe3ff9a8dea086c453bad7'
 
+const errorCallback = (error) => {
+  console.log(error);
+};
 
 button.addEventListener("click", () => {
-     let address = document.getElementById("search").value.toUpperCase()
+     address = document.getElementById("search").value.toUpperCase()
      console.log(address)
      //remove space
     //Make GET HTTP Request
@@ -34,6 +40,7 @@ button.addEventListener("click", () => {
           access_key: accessKey,
           query: address,
           output : 'json', 
+          callback :errorCallback,
           limit: 1
         }
       }).done(function(data) {

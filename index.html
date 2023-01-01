@@ -15,6 +15,7 @@
      <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet'/>
      <link rel=”stylesheet” href=”https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css”>
     <link rel="stylesheet" href="CSS/main.css"> 
+    <link rel="stylesheet" href="CSS/search.css">
     
 </head>
 
@@ -22,20 +23,14 @@
      <!-- Map Container -->
      <div id="map"></div>
     <!--search bar right align --> 
-       <div class="search">
-            <form action="#">
-                <input type="text"
-                    placeholder=" Search..."
-                    name="search"
-                    id="search">
-                    
-                <button id="button">
-                    <i class="fa fa-search"
-                        style="font-size: 18px;">
-                    </i>
-                </button>
-            </form>
+    <div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="What are you looking for?">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
         </div>
+     </div>
         <script src="JavaScript/main.js"></script>
 </body>
 </html>
