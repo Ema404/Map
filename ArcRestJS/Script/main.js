@@ -41,6 +41,7 @@ arcgisRest
         })
 .then((response) => {
 
+  // document.querySelector(".loader").style.visibility = "visible"//stop the load
     const result = response.candidates[0];
           if (!result) {
             alert("That query didn't match any geocoding results.");
@@ -58,5 +59,4 @@ arcgisRest
           alert("There was a problem using the geocoder. See the console for details.");
           console.error(error);
         });
-
 });
