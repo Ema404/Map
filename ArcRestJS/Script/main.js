@@ -6,7 +6,7 @@ const basemapEnum = "ArcGIS:Navigation";
 const map = new maplibregl.Map({
       container: "map",
       style: `https://basemaps-api.arcgis.com/arcgis/rest/services/styles/${basemapEnum}?type=style&token=${apiKey}`,
-      zoom: 13,
+      zoom: 10,
       center: [151.2093, -33.8688] // Sydney
     });
 
