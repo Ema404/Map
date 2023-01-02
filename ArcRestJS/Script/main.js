@@ -6,8 +6,8 @@ const basemapEnum = "ArcGIS:Navigation";
 const map = new maplibregl.Map({
       container: "map",
       style: `https://basemaps-api.arcgis.com/arcgis/rest/services/styles/${basemapEnum}?type=style&token=${apiKey}`,
-      zoom: 10,
-      center: [151.2093, -33.8688] // Sydney
+      zoom: 3,
+      center: [22.94297692002587,49.13761179873791 ] // Initail  State of the map
     });
 
 class GeocodeControl {
@@ -46,6 +46,7 @@ arcgisRest
             alert("That query didn't match any geocoding results.");
             return;
           }
+        
           const lngLat = [result.location.x, result.location.y];
 
           new maplibregl.Popup().setLngLat(lngLat).setHTML(result.attributes.LongLabel).addTo(map);
@@ -58,4 +59,4 @@ arcgisRest
           console.error(error);
         });
 
-    });
+});
